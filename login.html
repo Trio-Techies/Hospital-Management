@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img\logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Login - Wellness Web</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffcc00, #ff6600);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    button:hover {
+      background-color: #ff9900;
+    }
+    a{
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
+      <div class="flex flex-col justify-center p-8 md:p-14">
+        <span class="mb-3 text-4xl font-bold">Wellness Web</span>
+        <span class="font-light text-gray-400 mb-8">
+          Welcome Back! Please Enter Your Credentials
+        </span>
+        <form action="login.php" method="post">
+          <div class="py-4">
+            <span class="mb-2 text-md">Email</span>
+            <input type="email"
+              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+              name="email" id="email" required/>
+          </div>
+          <div class="py-4">
+            <span class="mb-2 text-md">Password</span>
+            <input type="password" name="pass" id="pass"
+              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500" required/>
+          </div>
+          <div class="flex justify-between w-full py-4">
+          </div>
+          <button
+            class="w-full bg-black text-white p-2 rounded-lg mb-6 hover:text-black hover:border hover:border-gray-300"
+            type="submit">
+            Sign In
+          </button>
+          <center>Don't Have An Account? <a href="signup.html"><u><i>Register Here</i></u></a></center>
+      </div>
+      </form>
+      <div class="relative">
+        <img src="img\login.jpg" alt="img" class="w-[400px] h-full hidden rounded-r-2xl md:block object-cover" />
+        <div
+          class="absolute hidden bottom-10 right-6 p-6 bg-black bg-opacity-60 backdrop-blur-sm rounded drop-shadow-lg md:block">
+          <span class="text-white text-xl">
+            "Wherever the art of medicine is loved, there is also a love of humanity !"
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img\logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Sign Up - Wellness Web</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffcc00, #ff6600);
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+
+        a {
+            color: blue;
+        }
+        select{
+            background-color: #cac9c9;
+            border: 1px solid;
+            width: 270px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
+            <div class="relative">
+                <img src="img/signup.jpg" alt="img"
+                    class="w-[400px] h-full hidden rounded-l-2xl md:block object-cover" />
+                <div
+                    class="absolute hidden bottom-10 right-6 p-6 bg-black bg-opacity-60 backdrop-blur-sm rounded drop-shadow-lg md:block">
+                    <span class="text-white text-xl">
+                        "Wherever the art of medicine is loved, there is also a love of humanity !"
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center p-8 md:p-14">
+                <span class="mb-3 text-4xl font-bold">Wellness Web</span>
+                <span class="font-light text-gray-400 mb-8">
+                    Fill In All The Details To Sign Up
+                </span>
+                <form action="signup.php" method="post" enctype="multipart/form-data">
+                    <div class="py-4">
+                        <span class="mb-2 text-md">First Name</span>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="FirstName" id="FirstName" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Last Name</span>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="LastName" id="LastName" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Password</span>
+                        <input type="password" name="pass" id="pass"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Email</span>
+                        <input type="email"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Email" id="Email" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Date Of Birth</span>
+                        <input type="Date"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="DOB" id="DOB" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Gender&emsp;&emsp;</span>
+                        <select name="Gender" id="Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Preffered Not To Say">Preffered Not To Say</option>
+                        </select>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Photo</span>
+                        <input type="file"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Photo" id="Photo" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Nationality</span>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Nationality" id="Nationality" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Phone No</span>
+                        <input type="tel"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Phone" id="Phone" pattern="[0-9]{10}" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Address</span>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Address" id="Address" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">City</span>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="City" id="City" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Pin Code</span>
+                        <input type="num"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Pin" id="Pin" pattern="[0-9]{6}" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Aadhar Number</span>
+                        <input type="num"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="Aadhar" id="Aadhar" pattern="[0-9]{12}" required/>
+                    </div>
+
+                    <div class="py-4">
+                        <span class="mb-2 text-md">Blood Group</span>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            name="blood" id="blood" required/>
+                    </div>
+                    <div class="flex justify-between w-full py-4">
+                    </div>
+                    <button type="submit" name="submit"
+                        class="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300">
+                        Sign In
+                    </button>
+                    <center>Already Have An Account? <a href="login.html"><u><i>Login Here</i></u></a></center>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
